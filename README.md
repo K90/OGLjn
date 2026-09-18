@@ -15,7 +15,7 @@ Thanks for checking it out :)
 ### Resources i use:
 
 Websites:
-[learncpp.com](learncpp.com)
+[learncpp.com](learncpp.com),
 [learnopengl.com](learnopengl.com) (A book as well)
 
 Books:
