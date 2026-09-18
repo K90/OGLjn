@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "HelloTriangle\\x64\\Debug\\glfw3.obj",
+            "outputs": [
+                "HelloTriangle\\x64\\Debug\\glfw3.h.obj.dt.module.json",
+                "HelloTriangle\\x64\\Debug\\glfw3.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
