@@ -1,7 +1,7 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\keanh\\source\\repos\\hellotriangle\\main.cpp",
+        "Source": "c:\\users\\keanh\\source\\repos\\ogljn\\hellotriangle\\main.cpp",
         "ProvidedModule": "",
         "Includes": [
             "c:\\dev\\opengl\\includes\\glad\\glad.h",
@@ -130,7 +130,8 @@
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\ctype.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\clocale",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\locale.h",
-            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\ostream"
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\ostream",
+            "c:\\users\\keanh\\source\\repos\\ogljn\\hellotriangle\\window.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

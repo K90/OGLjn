@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\keanh\\source\\repos\\HelloTriangle\\",
+  "WorkspaceRootPath": "C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B0DBF98-8128-4824-BEB7-9958BDF0B4A5}|HelloTriangle.vcxproj|C:\\Users\\keanh\\source\\repos\\HelloTriangle\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7B0DBF98-8128-4824-BEB7-9958BDF0B4A5}|HelloTriangle.vcxproj|C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7B0DBF98-8128-4824-BEB7-9958BDF0B4A5}|HelloTriangle.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0DBF98-8128-4824-BEB7-9958BDF0B4A5}|HelloTriangle.vcxproj|C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B0DBF98-8128-4824-BEB7-9958BDF0B4A5}|HelloTriangle.vcxproj|solutionrelative:window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0DBF98-8128-4824-BEB7-9958BDF0B4A5}|HelloTriangle.vcxproj|C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B0DBF98-8128-4824-BEB7-9958BDF0B4A5}|HelloTriangle.vcxproj|solutionrelative:window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,13 +30,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "window.h",
+              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\window.h",
+              "RelativeDocumentMoniker": "window.h",
+              "ToolTip": "C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\window.h",
+              "RelativeToolTip": "window.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-18T14:07:56.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "window.cpp",
+              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\window.cpp",
+              "RelativeDocumentMoniker": "window.cpp",
+              "ToolTip": "C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\window.cpp",
+              "RelativeToolTip": "window.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-18T14:03:25.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\HelloTriangle\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\keanh\\source\\repos\\HelloTriangle\\main.cpp",
+              "ToolTip": "C:\\Users\\keanh\\source\\repos\\OGLjn\\HelloTriangle\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-17T09:12:11.138Z",
               "EditorCaption": ""
