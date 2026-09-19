@@ -1,4 +1,3 @@
-#include <glad/glad.h>
 #include <glfw3.h>
 #include <iostream>
 #include "window.h"
@@ -11,6 +10,11 @@ GLFWwindow* createWindow() {
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	GLFWwindow* window = glfwCreateWindow(800, 600, "HelloTriangle", NULL, NULL);
+
+	if (window == NULL) {
+		std::cout << "Failed to create GLFW window" << std::endl;
+		glfwTerminate();
+	}
 
 	glfwMakeContextCurrent(window);
 
