@@ -1,4 +1,4 @@
-#### Still at the very basics of graphics programming (and C++, to be fair).
+#### Still at the very basics of graphics programming C++.
 
 Using this as a __means to track__ my learning progress.
 
