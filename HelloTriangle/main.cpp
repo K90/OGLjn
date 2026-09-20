@@ -2,6 +2,7 @@
 #include <glfw3.h> 
 #include <iostream>
 #include "window.h"
+#include "input_handler.h"
 
 const char *vertexShaderSource = "#version 330 core\n"
 	"layout (location = 0) in vec3 aPos;\n"
@@ -15,7 +16,7 @@ const char *fragmentShaderSource = "#version 330 core\n"
 	" FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
 	"}\0";
 
-void processInput(GLFWwindow* window);
+
 
 int main() {
 
@@ -27,27 +28,11 @@ int main() {
 		return -1;
 	}
 
-	//vertex input
-
-	float vertices [] = {															//define normalized device coords
-		-0.5f, -0.5f, 0.0f,
-		 0.5f, -0.5f, 0.0f,
-		 0.0f,  0.5f, 0.0f
-
-	};
-
-	unsigned int VBO;																//vbos can store large amounts of vertex data on the gpu
-	glGenBuffers(1, &VBO);															//generate one with a buffer ID using glGenBuffers func
-
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);												/*Any buffer calls made on GL_ARRAY_BUFFER is now used
-																					  to configure the correctly bound buffer, which is VBO*/
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);		//copy vertex data to buffers memory
-
 	//vertex shader
-	unsigned int vertexShader;														//define object so we can dynamically compile vertshader 
-	vertexShader = glCreateShader(GL_VERTEX_SHADER);								//at runtime, so we pass GL_VERTEX_SHADER
+	unsigned int vertexShader;
+	vertexShader = glCreateShader(GL_VERTEX_SHADER);
 
-	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);						//attatch shader source to shader object
+	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
 	glCompileShader(vertexShader);													
 
 	//fragment shader
@@ -75,6 +60,53 @@ int main() {
 			fragInfoLog << std::endl;
 	}
 
+	//shader program
+	unsigned int shaderProgram;
+	shaderProgram = glCreateProgram();
+
+	glAttachShader(shaderProgram, vertexShader);
+	glAttachShader(shaderProgram, fragmentShader);
+	glLinkProgram(shaderProgram);
+
+	int linkSuccess;
+	char linkInfoLog[512];
+	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &linkSuccess);
+	if (!linkSuccess) {
+		glGetProgramInfoLog(shaderProgram, 512, NULL, fragInfoLog);
+		std::cout <<"--ERROR::PROGRAM::SHADERS::LINKING_FAILED--\n" <<
+			linkInfoLog << std::endl;
+	}
+
+	glDeleteShader(vertexShader);
+	glDeleteShader(fragmentShader);
+
+	//vertex input
+
+	float vertices [] = {
+		-0.5f, -0.5f, 0.0f,
+		 0.5f, -0.5f, 0.0f,
+		 0.0f,  0.5f, 0.0f
+
+	};
+
+	unsigned int VBO, VAO;
+	glGenVertexArrays(1, &VAO);
+	glGenBuffers(1, &VBO);
+
+	glBindVertexArray(VAO);
+
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+	//linking vertex attributes
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float),
+							(void*)0);
+	glEnableVertexAttribArray(0);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+	glBindVertexArray(0);
+
 	//render loop
 	while (!glfwWindowShouldClose(window)) {
 
@@ -83,6 +115,11 @@ int main() {
 
 		//rendering commands
 		glClear(GL_COLOR_BUFFER_BIT);
+	
+
+		glUseProgram(shaderProgram);
+		glBindVertexArray(VAO);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		//check and call events and swap buffers
 		glfwSwapBuffers(window);
@@ -93,8 +130,4 @@ int main() {
 	return 0;
 }
 
-void processInput(GLFWwindow* window) {
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-		glfwSetWindowShouldClose(window, true);
-}
 

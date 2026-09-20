@@ -26,9 +26,15 @@
     <ClCompile Include="triangle.vert">
       <Filter>src\shaders</Filter>
     </ClCompile>
+    <ClCompile Include="input_handler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="input_handler.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

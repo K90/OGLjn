@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "HelloTriangle\\x64\\Debug\\input_handler.obj",
+            "outputs": [
+                "HelloTriangle\\x64\\Debug\\input_handler.h.obj.dt.module.json",
+                "HelloTriangle\\x64\\Debug\\input_handler.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -150,11 +150,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="glad.c" />
+    <ClCompile Include="input_handler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="triangle.vert" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="input_handler.h" />
     <ClInclude Include="window.h" />
   </ItemGroup>
   <ItemGroup>
