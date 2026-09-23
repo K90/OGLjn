@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="2-Shaders.vcxproj" />
+  <Project Path="2-Shaders.vcxproj" Id="7e00f91c-d74c-4f0c-b3de-952b364c33ee" />
 </Solution>

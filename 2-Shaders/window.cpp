@@ -10,7 +10,7 @@ GLFWwindow* createWindow() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(800, 600, "Shaders", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(600, 600, "Shaders", NULL, NULL);
 
 	if (window == NULL) {
 		std::cout << "Failed to create GLFW window" << "\n";
@@ -35,4 +35,11 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 void processInput(GLFWwindow* window) {
 	if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
+}
+
+void getOpenGLInfo() {
+	std::cout << "VENDOR: " << glGetString(GL_VENDOR) << "\n";
+	std::cout << "RENDERER: " << glGetString(GL_RENDERER) << "\n";
+	std::cout << "OGL_VERSION: " << glGetString(GL_VERSION) << "\n";
+	std::cout << "GLSL_VERSION: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << "\n";
 }

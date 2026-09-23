@@ -125,7 +125,7 @@ int main() {
 	
 		glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_LINE_LOOP, 6, GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
 
 

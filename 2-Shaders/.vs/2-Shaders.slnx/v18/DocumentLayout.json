@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\keanh\\source\\repos\\2-Shaders\\",
+  "WorkspaceRootPath": "C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|C:\\Users\\keanh\\source\\repos\\2-Shaders\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|C:\\Users\\keanh\\source\\repos\\2-Shaders\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|solutionrelative:window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|C:\\Users\\keanh\\source\\repos\\2-Shaders\\window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|solutionrelative:window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|C:\\Users\\keanh\\source\\repos\\2-Shaders\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7E00F91C-D74C-4F0C-B3DE-952B364C33EE}|2-Shaders.vcxproj|solutionrelative:glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -36,37 +36,35 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "window.h",
-              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\2-Shaders\\window.h",
+              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\window.h",
               "RelativeDocumentMoniker": "window.h",
-              "ToolTip": "C:\\Users\\keanh\\source\\repos\\2-Shaders\\window.h",
+              "ToolTip": "C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\window.h",
               "RelativeToolTip": "window.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-21T18:02:01.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T18:02:01.6Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "window.cpp",
-              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\2-Shaders\\window.cpp",
+              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\window.cpp",
               "RelativeDocumentMoniker": "window.cpp",
-              "ToolTip": "C:\\Users\\keanh\\source\\repos\\2-Shaders\\window.cpp",
+              "ToolTip": "C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\window.cpp",
               "RelativeToolTip": "window.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowCIAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-21T18:00:56.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T18:00:56.266Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\2-Shaders\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\keanh\\source\\repos\\2-Shaders\\main.cpp",
+              "ToolTip": "C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-21T16:47:26.324Z",
               "EditorCaption": ""
@@ -75,14 +73,13 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "glad.c",
-              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\2-Shaders\\glad.c",
+              "DocumentMoniker": "C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\glad.c",
               "RelativeDocumentMoniker": "glad.c",
-              "ToolTip": "C:\\Users\\keanh\\source\\repos\\2-Shaders\\glad.c",
+              "ToolTip": "C:\\Users\\keanh\\source\\repos\\OGLjn\\2-Shaders\\glad.c",
               "RelativeToolTip": "glad.c",
               "ViewState": "AgIAADkEAAAAAAAAAAAQwFsEAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-09-21T16:43:24.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-21T16:43:24.524Z"
             }
           ]
         }
