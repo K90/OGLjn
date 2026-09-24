@@ -6,19 +6,20 @@
 		
 int main(void) {
 
-	GLFWwindow* window = createWindow();
+	GLFWwindow* window {createWindow()};
 	getOpenGLInfo();
 
-	GLuint vertexShader = initVertexShader();
-	GLuint fragmentShader = initFragmentShader();
-	GLuint shaderProgram = initShaderProgram(vertexShader, fragmentShader);
+	GLuint vertexShader {initVertexShader()};
+	GLuint fragmentShader {initFragmentShader()};
+	GLuint shaderProgram {initShaderProgram(vertexShader, fragmentShader)};
+	testAndClean(vertexShader, fragmentShader, shaderProgram);
 
 	float vertices [] = {
 		
-		-0.5f, 0.5f, 0.0f,
-		 0.5f, 0.5f, 0.0f,
-		 0.5f, -0.5f, 0.0f,
-		 -0.5f, -0.5f, 0.0f
+		-0.5f,  0.5f,  0.0f,
+		 0.5f,  0.5f,  0.0f,
+		 0.5f, -0.5f,  0.0f,
+		-0.5f, -0.5f,  0.0f
 
 	};
 
@@ -44,6 +45,7 @@ int main(void) {
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
+	float timeValue = glfwGetTime();
 	int vertexColorLocation = glGetUniformLocation(shaderProgram, "vertexColor"); 
 	glUseProgram(shaderProgram);
 	glUniform4f(vertexColorLocation, 0.0f, 1.0f, 0.0f, 1.0f);

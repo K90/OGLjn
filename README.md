@@ -1,13 +1,13 @@
-#### Still at the very basics of graphics programming C++.
+#### Still at the very basics of graphics programming and C++.
 
 Using this as a __means to track__ my learning progress.
 
-I do try to modify and play with their (resources) code as much as possible, and try to focus on
+I do try to modify and play with their (resources i use) code as much as possible, and try to focus on
 writing code to a high standard, however, it is in my best interest to absorb the math and focus
 on getting things working.
 
 That said, there are many things that needs to be learned in order to do this properly, so
-I am just figuring it out as I go. Seems that there aren't clear ways on how people learn
+I am just figuring it out as I go. Seems that there aren't clear ways on how everyone learns
 GP, so learning bit by bit is a win.
 
 Thanks for checking it out :)
