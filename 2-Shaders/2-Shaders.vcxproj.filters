@@ -20,9 +20,15 @@
     <ClCompile Include="window.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="shaders.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="shaders.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

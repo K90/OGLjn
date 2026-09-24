@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "2-Shaders\\x64\\Debug\\glfw3.obj",
+            "outputs": [
+                "2-Shaders\\x64\\Debug\\glfw3.h.obj.dt.module.json",
+                "2-Shaders\\x64\\Debug\\glfw3.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
