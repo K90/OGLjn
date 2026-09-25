@@ -5,15 +5,21 @@
 
 const char *vertexShaderSource = "#version 330 core\n"
 								 "layout (location = 0) in vec3 aPos;\n"
+								 "layout (location = 1) in vec3 aColor;\n"
+								 "out vec3 vertexColor;\n"
 								 "void main() {\n"
-								 "	gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0f);\n"
+								 "	  gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0f);\n"
+								 "	  vertexColor = aColor;\n"
 								 "}\0";
 
 const char *fragmentShaderSource = "#version 330 core\n"
-								   "uniform vec4 vertexColor;\n"
-								   "out vec4 FragColor;\n"
+								   "uniform vec4 vertexChangeColor;\n"
+								   "out vec4 FinalColor;\n"
+								   "vec4 FragColor;\n"
+								   "in vec3 vertexColor;\n"
 								   "void main() {\n"
-								   "FragColor = vertexColor;\n"
+								   "	FragColor = vec4(vertexColor, 1.0);\n"
+								   "	FinalColor = FragColor + vertexChangeColor;\n"
 								   "}\0";
 GLuint initVertexShader() {
 	GLuint vertexShader;

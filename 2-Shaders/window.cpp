@@ -41,5 +41,5 @@ void getOpenGLInfo() {
 	std::cout << "VENDOR: " << glGetString(GL_VENDOR) << "\n";
 	std::cout << "RENDERER: " << glGetString(GL_RENDERER) << "\n";
 	std::cout << "OGL_VERSION: " << glGetString(GL_VERSION) << "\n";
-	std::cout << "GLSL_VERSION: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << "\n";
+	std::cout << "GLSL_VERSION: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << "\n\n\n";
 }

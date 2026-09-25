@@ -16,16 +16,16 @@ int main(void) {
 
 	float vertices [] = {
 		
-		-0.5f,  0.5f,  0.0f,
-		 0.5f,  0.5f,  0.0f,
-		 0.5f, -0.5f,  0.0f,
-		-0.5f, -0.5f,  0.0f
+		-0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f,
+		 0.5f,  0.5f,  0.0f, 0.0f, 1.0f, 0.0f,
+		 0.5f, -0.5f,  0.0f, 0.0f, 0.0f, 1.0f,
+		-0.5f, -0.5f,  0.0f, 1.0f, 1.0f, 1.0f
 
 	};
 
 	GLuint indeces [] = {
-		0, 1, 3,
-		1, 2, 3
+		0, 2, 6,
+		2, 4, 6
 	};
 
 	GLuint VAO;
@@ -45,11 +45,11 @@ int main(void) {
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
-	float timeValue = glfwGetTime();
-	int vertexColorLocation = glGetUniformLocation(shaderProgram, "vertexColor"); 
-	glUseProgram(shaderProgram);
-	glUniform4f(vertexColorLocation, 0.0f, 1.0f, 0.0f, 1.0f);
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)(3 * sizeof(float)));
+	glEnableVertexAttribArray(1);
 
+	glUseProgram(shaderProgram);
+	 
 	glBindVertexArray(0);
 
 	while (!glfwWindowShouldClose(window)) {
@@ -57,11 +57,19 @@ int main(void) {
 		processInput(window);
 
 		glClear(GL_COLOR_BUFFER_BIT);
+
+		float timeValue {static_cast<float>(glfwGetTime())};
+		float greenValue {(sin(timeValue) + 1.0f) / 2.0f};
+		float blueValue {(sin(timeValue + 4.0f) + 1.0f) / 2.0f};
+		float redValue = {(sin(timeValue + 2.0f) + 1.0f) / 2.0f};
+		int vertexColorLocation {glGetUniformLocation(shaderProgram, "vertexChangeColor")}; 
+		glUniform4f(vertexColorLocation, redValue, greenValue, blueValue, 1.0f);
 		
 		glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-		glDrawElements(GL_LINE_LOOP, 6, GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		//glDrawElements(GL_LINE_LOOP, 6, GL_UNSIGNED_INT, 0);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
