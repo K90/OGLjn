@@ -9,6 +9,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="src\shaders">
+      <UniqueIdentifier>{bf93480b-b2f8-42ca-a9a1-d77466067202}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glad.c">
@@ -20,16 +23,21 @@
     <ClCompile Include="window.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="shaders.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="shaders.h">
+    <ClInclude Include="shader.h">
       <Filter>src</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="triangle.vert">
+      <Filter>src\shaders</Filter>
+    </None>
+    <None Include="triangle.frag">
+      <Filter>src\shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

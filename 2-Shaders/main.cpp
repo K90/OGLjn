@@ -2,30 +2,27 @@
 #include <glfw3.h>
 #include <iostream>
 #include "window.h"
-#include "shaders.h"
-		
+#include "shader.h"
+
 int main(void) {
 
 	GLFWwindow* window {createWindow()};
 	getOpenGLInfo();
 
-	GLuint vertexShader {initVertexShader()};
-	GLuint fragmentShader {initFragmentShader()};
-	GLuint shaderProgram {initShaderProgram(vertexShader, fragmentShader)};
-	testAndClean(vertexShader, fragmentShader, shaderProgram);
+	Shader triangleShader("triangle.vert", "triangle.frag");
 
 	float vertices [] = {
 		
-		-0.5f,  0.5f,  0.0f, 1.0f, 0.0f, 0.0f,
-		 0.5f,  0.5f,  0.0f, 0.0f, 1.0f, 0.0f,
-		 0.5f, -0.5f,  0.0f, 0.0f, 0.0f, 1.0f,
-		-0.5f, -0.5f,  0.0f, 1.0f, 1.0f, 1.0f
+		-0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  0.0f,
+		 0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,
+		 0.5f, -0.5f,  0.0f,  0.0f,  0.0f,  1.0f,
+		-0.5f, -0.5f,  0.0f, 0.5f, 0.5f, 0.5f
 
 	};
 
 	GLuint indeces [] = {
-		0, 2, 6,
-		2, 4, 6
+		0,	2,	6,
+		2,	4,	6
 	};
 
 	GLuint VAO;
@@ -48,8 +45,8 @@ int main(void) {
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
 
-	glUseProgram(shaderProgram);
-	 
+	triangleShader.use();
+
 	glBindVertexArray(0);
 
 	while (!glfwWindowShouldClose(window)) {
@@ -58,24 +55,24 @@ int main(void) {
 
 		glClear(GL_COLOR_BUFFER_BIT);
 
+		triangleShader.use();
+
 		float timeValue {static_cast<float>(glfwGetTime())};
-		float greenValue {(sin(timeValue) + 1.0f) / 2.0f};
-		float blueValue {(sin(timeValue + 4.0f) + 1.0f) / 2.0f};
-		float redValue = {(sin(timeValue + 2.0f) + 1.0f) / 2.0f};
-		int vertexColorLocation {glGetUniformLocation(shaderProgram, "vertexChangeColor")}; 
+		float greenValue {(sin(timeValue) + 1) / 2};
+		float blueValue {(sin(timeValue + 2) + 1) / 2};
+		float redValue = {(sin(timeValue + 4) + 1) / 2};
+		int vertexColorLocation {glGetUniformLocation(triangleShader.ID, "vertexChangeColor")}; 
 		glUniform4f(vertexColorLocation, redValue, greenValue, blueValue, 1.0f);
-		
-		glUseProgram(shaderProgram);
+
 		glBindVertexArray(VAO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-		//glDrawElements(GL_LINE_LOOP, 6, GL_UNSIGNED_INT, 0);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
 	
-	glDeleteProgram(shaderProgram);
+	//glDeleteProgram();
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &EBO);
 	glDeleteVertexArrays(1, &VAO);
