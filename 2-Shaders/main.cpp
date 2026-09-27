@@ -6,7 +6,6 @@
 #include "Shader.h"
 #include "Window.h"
 
-
 int main(void) {
 
 	GLFWwindow* window {createWindow()};
@@ -19,7 +18,7 @@ int main(void) {
 		-0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  0.0f,
 		 0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,
 		 0.5f, -0.5f,  0.0f,  0.0f,  0.0f,  1.0f,
-		-0.5f, -0.5f,  0.0f,  0.3f,  0.3f,  0.3f
+		-0.5f, -0.5f,  0.0f,  0.0f,  0.0f,  0.0f
 
 	};
 
@@ -44,9 +43,12 @@ int main(void) {
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
-
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
+
+	//glDisableVertexAttribArray(0);
+	//glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)(6 * sizeof(float)));
+	//glEnableVertexAttribArray(2);
 
 	triangleShader.use();
 
@@ -62,31 +64,31 @@ int main(void) {
 
 		std::cout << renderState << "\n";
 
-		float timeValue {static_cast<float>(glfwGetTime())};
-		float greenValue {(sin(timeValue * 0.5f) + 1) / 2};
-		float blueValue {(sin(timeValue * 0.5f + 2)  + 1) / 2};
-		float redValue {(sin(timeValue * 0.5f + 4) + 1) / 2};
-		int vertexColorLocation {glGetUniformLocation(triangleShader.ID, "vertexChangeColor")}; 
-		glUniform4f(vertexColorLocation, redValue, greenValue, blueValue, 1.0f);
-
 		glBindVertexArray(VAO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+		
+		switch (renderState) {
+			case 0:
+				resetColorToDefault(triangleShader.ID);
+				glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+				break;
+			case 1:
+				resetColorToDefault(triangleShader.ID);
+				glDrawElements(GL_LINE_LOOP, 6, GL_UNSIGNED_INT, 0);
+				break;
+			case 2:
+				applyDynamicColoring(triangleShader.ID);
+				glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+				break;
 
-		if (renderState == 0) {
-			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		}
-		if (renderState == 1) {
-			glDrawElements(GL_LINE_LOOP, 6, GL_UNSIGNED_INT, 0);
-		}
-		if (renderState == 2) {
-			glDrawElements(GL_POINTS, 6, GL_UNSIGNED_INT, 0);
-		} //these ugly if statements are placeholders, will refactor.
-
+		
 		triangleShader.use();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
-	}
+
+	};
 	
 	glDeleteProgram(triangleShader.ID);
 	glDeleteBuffers(1, &VBO);
@@ -95,3 +97,4 @@ int main(void) {
 
 	return 0;
 }
+

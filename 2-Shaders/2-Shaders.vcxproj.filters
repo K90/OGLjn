@@ -29,6 +29,9 @@
     <ClCompile Include="RenderState.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="ColorSwitcher.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -38,6 +41,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="RenderState.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorSwitcher.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
