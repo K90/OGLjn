@@ -1,7 +1,7 @@
 #include <glad/glad.h>
 #include <glfw3.h>
 #include <iostream>
-#include "window.h"
+#include "Window.h"
 
 GLFWwindow* createWindow() {
 	
@@ -33,8 +33,10 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 }
 
 void processInput(GLFWwindow* window) {
+
 	if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
+
 }
 
 void getOpenGLInfo() {

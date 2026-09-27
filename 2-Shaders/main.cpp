@@ -1,8 +1,11 @@
 #include <glad/glad.h>
 #include <glfw3.h>
 #include <iostream>
-#include "window.h"
-#include "shader.h"
+
+#include "RenderState.h"
+#include "Shader.h"
+#include "Window.h"
+
 
 int main(void) {
 
@@ -16,7 +19,7 @@ int main(void) {
 		-0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  0.0f,
 		 0.5f,  0.5f,  0.0f,  0.0f,  1.0f,  0.0f,
 		 0.5f, -0.5f,  0.0f,  0.0f,  0.0f,  1.0f,
-		-0.5f, -0.5f,  0.0f, 0.5f, 0.5f, 0.5f
+		-0.5f, -0.5f,  0.0f,  0.3f,  0.3f,  0.3f
 
 	};
 
@@ -33,7 +36,7 @@ int main(void) {
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-	
+
 	GLuint EBO;
 	glGenBuffers(1, &EBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
@@ -52,27 +55,40 @@ int main(void) {
 	while (!glfwWindowShouldClose(window)) {
 		
 		processInput(window);
+		scrollRenderState(window);
+		int renderState{getcurrRenderState()};
 
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		triangleShader.use();
+		std::cout << renderState << "\n";
 
 		float timeValue {static_cast<float>(glfwGetTime())};
-		float greenValue {(sin(timeValue) + 1) / 2};
-		float blueValue {(sin(timeValue + 2) + 1) / 2};
-		float redValue = {(sin(timeValue + 4) + 1) / 2};
+		float greenValue {(sin(timeValue * 0.5f) + 1) / 2};
+		float blueValue {(sin(timeValue * 0.5f + 2)  + 1) / 2};
+		float redValue {(sin(timeValue * 0.5f + 4) + 1) / 2};
 		int vertexColorLocation {glGetUniformLocation(triangleShader.ID, "vertexChangeColor")}; 
 		glUniform4f(vertexColorLocation, redValue, greenValue, blueValue, 1.0f);
 
 		glBindVertexArray(VAO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+		if (renderState == 0) {
+			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		}
+		if (renderState == 1) {
+			glDrawElements(GL_LINE_LOOP, 6, GL_UNSIGNED_INT, 0);
+		}
+		if (renderState == 2) {
+			glDrawElements(GL_POINTS, 6, GL_UNSIGNED_INT, 0);
+		} //these ugly if statements are placeholders, will refactor.
+
+		triangleShader.use();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
 	
-	//glDeleteProgram();
+	glDeleteProgram(triangleShader.ID);
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &EBO);
 	glDeleteVertexArrays(1, &VAO);

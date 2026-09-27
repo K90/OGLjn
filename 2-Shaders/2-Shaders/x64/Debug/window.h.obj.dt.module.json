@@ -3,10 +3,10 @@
     "revision": 0,
     "rules": [
         {
-            "primary-output": "2-Shaders\\x64\\Debug\\window.obj",
+            "primary-output": "2-Shaders\\x64\\Debug\\Window.obj",
             "outputs": [
-                "2-Shaders\\x64\\Debug\\window.h.obj.dt.module.json",
-                "2-Shaders\\x64\\Debug\\window.h.obj.dt.d.json"
+                "2-Shaders\\x64\\Debug\\Window.h.obj.dt.module.json",
+                "2-Shaders\\x64\\Debug\\Window.h.obj.dt.d.json"
             ],
             "requires": []
         }

@@ -1,5 +1,4 @@
-#ifndef SHADER_H
-#define SHADER_H
+#pragma once
 
 #include <glad/glad.h>
 #include <string>
@@ -18,7 +17,7 @@ class Shader {
 			std::string vertexCode;
 			std::string fragmentCode;
 			std::ifstream vShaderFile;
-			std::ifstream fShaderFile;
+			std::ifstream fShaderFile; 
 
 			vShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
 			fShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
@@ -99,10 +98,3 @@ class Shader {
 		}
 
 };
-
-//GLuint initVertexShader();
-//GLuint initFragmentShader();
-//GLuint initShaderProgram(GLuint vert, GLuint frag);
-//void testAndClean(GLuint vert, GLuint frag, GLuint program);
-
-#endif // !SHADERS_H

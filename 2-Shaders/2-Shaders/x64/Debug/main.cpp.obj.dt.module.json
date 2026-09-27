@@ -3,10 +3,10 @@
     "revision": 0,
     "rules": [
         {
-            "primary-output": "2-Shaders\\x64\\Debug\\main.obj",
+            "primary-output": "2-Shaders\\x64\\Debug\\Main.obj",
             "outputs": [
-                "2-Shaders\\x64\\Debug\\main.cpp.obj.dt.module.json",
-                "2-Shaders\\x64\\Debug\\main.cpp.obj.dt.d.json"
+                "2-Shaders\\x64\\Debug\\Main.cpp.obj.dt.module.json",
+                "2-Shaders\\x64\\Debug\\Main.cpp.obj.dt.d.json"
             ],
             "requires": []
         }

@@ -12,23 +12,32 @@
     <Filter Include="src\shaders">
       <UniqueIdentifier>{bf93480b-b2f8-42ca-a9a1-d77466067202}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\vendor">
+      <UniqueIdentifier>{21316183-b892-4b92-9f1d-370e81cc67a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="glad.c">
-      <Filter>src</Filter>
+      <Filter>src\vendor</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="window.cpp">
+    <ClCompile Include="RenderState.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="window.h">
+    <ClInclude Include="Window.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="shader.h">
+    <ClInclude Include="Shader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderState.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
