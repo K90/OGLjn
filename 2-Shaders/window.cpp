@@ -47,4 +47,3 @@ void getOpenGLInfo() {
 	std::cout << "GLSL_VERSION: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << "\n\n\n";
 
 }
-

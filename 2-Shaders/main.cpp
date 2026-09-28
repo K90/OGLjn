@@ -46,10 +46,6 @@ int main(void) {
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
 
-	//glDisableVertexAttribArray(0);
-	//glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)(6 * sizeof(float)));
-	//glEnableVertexAttribArray(2);
-
 	triangleShader.use();
 
 	glBindVertexArray(0);
@@ -61,8 +57,6 @@ int main(void) {
 		int renderState{getcurrRenderState()};
 
 		glClear(GL_COLOR_BUFFER_BIT);
-
-		std::cout << renderState << "\n";
 
 		glBindVertexArray(VAO);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);

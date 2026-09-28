@@ -7,3 +7,16 @@ Debug/
 Release/
 *.ipch
 **/glad.c
+*.slnx
+.vscode/
+.idea/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+build/
+CMakeCache.txt
+CMakeFiles/
+.DS_Store
+Thumbs.db
