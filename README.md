@@ -1,7 +1,7 @@
 <details>
 <summary>2-Shaders</summary>
 
-Shaders set the color from the vertex position of the square, and a uniform dynamically changes the colors according to elapsed time.
+Shaders set the color from the vertex position of the square, and a uniform that dynamically changes the colors according to elapsed time.
 
 </details>
 
