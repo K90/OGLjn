@@ -1,9 +1,11 @@
 
 Shaders set the color to the vertex pos of te square, and a uniform dynamically changing the colors according
 to allapsed time.
+
 ![2-shaders](src/2-Triangle.webp)
 
 My first triangle(s)
+
 ![1-hello_triangle-screenshot](src/1-HelloTriangle.png)
 
 #### Still at the very basics of graphics programming and C++.
