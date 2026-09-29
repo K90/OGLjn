@@ -3,9 +3,9 @@
 
 Shaders set the color from the vertex position of the square, and a uniform dynamically changes the colors according to elapsed time.
 
-![2-shaders](src/2-Triangle.webp)
-
 </details>
+
+![2-shaders](src/2-Triangle.webp)
 
 <details>
 
@@ -13,9 +13,9 @@ Shaders set the color from the vertex position of the square, and a uniform dyna
 
 My first triangle(s)
 
-![1-hello_triangle-screenshot](src/1-HelloTriangle.png)
-
 </details>
+
+![1-hello_triangle-screenshot](src/1-HelloTriangle.png)
 
 #### Still at the very basics of graphics programming and C++.
 
