@@ -1,12 +1,21 @@
+<details>
+<summary>2. Shaders</summary>
 
-Shaders set the color to the vertex pos of te square, and a uniform dynamically changing the colors according
-to allapsed time.
+Shaders set the color from the vertex position of the square, and a uniform dynamically changes the colors according to elapsed time.
 
 ![2-shaders](src/2-Triangle.webp)
+
+</details>
+
+<details>
+
+<summary>1. Hello Triangle</summary>
 
 My first triangle(s)
 
 ![1-hello_triangle-screenshot](src/1-HelloTriangle.png)
+
+</details>
 
 #### Still at the very basics of graphics programming and C++.
 
@@ -25,8 +34,8 @@ Thanks for checking it out :)
 ### Resources i use:
 
 Websites:
-[learncpp.com](learncpp.com),
-[learnopengl.com](learnopengl.com) (A book as well)
+[learncpp.com](https://www.learncpp.com),
+[learnopengl.com](https://learnopengl.com) (a book as well)
 
 Books:
 [Fundamentals of Computer Graphics](https://www.cs.cornell.edu/~srm/fcg3/) by: Steve Marschner and Peter Shirley
