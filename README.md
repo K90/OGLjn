@@ -21,7 +21,7 @@ My first triangle(s)
 
 Using this as a __means to track__ my learning progress.
 
-I do try to modify and play with their (resources i use) code as much as possible, and try to focus on
+I do try to modify and play with their [resources I use](#resources-i-use) code as much as possible, and try to focus on
 writing code to a high standard, however, it is in my best interest to absorb the math and focus
 on getting things working.
 
