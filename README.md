@@ -1,5 +1,5 @@
 <details>
-<summary>2. Shaders</summary>
+<summary>2-Shaders</summary>
 
 Shaders set the color from the vertex position of the square, and a uniform dynamically changes the colors according to elapsed time.
 
@@ -9,7 +9,7 @@ Shaders set the color from the vertex position of the square, and a uniform dyna
 
 <details>
 
-<summary>1. Hello Triangle</summary>
+<summary>1-HelloTriangle</summary>
 
 My first triangle(s)
 
