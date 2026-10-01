@@ -6,6 +6,6 @@ vec4 FragColor;
 
 void main() {
 	
-	FragColor = vec4(triangleColor, 1.0f);
+	FragColor = (1, 1, 1, 1);
 
 }
